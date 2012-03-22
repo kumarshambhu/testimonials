@@ -1,0 +1,18 @@
+<?php
+$this->headScript()
+    ->appendFile('js/ckeditor/ckeditor.js')
+    ->appendFile('js/axis/admin/core/ckeditor.js')
+    ->appendFile('js/ext-axis/src/widgets/form/CKEditor.js');
+
+$this->headScript()
+    ->appendFile('js/example/testimonials/admin/translation/' . Axis_Locale::getLocale()->toString() . '/testimonials.js')
+    ->appendFile('js/example/testimonials/admin/testimonial.js')
+    ->appendFile('js/example/testimonials/admin/grid.js')
+    ->appendFile('js/example/testimonials/admin/window.js')
+    ->appendFile('js/example/testimonials/admin/panel.js');
+
+?>
+
+<script type="text/javascript">
+var sites = <?php echo Zend_Json::encode($this->sites) ?>;
+</script>

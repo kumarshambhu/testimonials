@@ -1,0 +1,20 @@
+<?php if (!$this->box->testimonials) : ?>
+    <p class="empty-query"><?php echo Axis::translate('example_testimonials')->__('Testimonials not found'); ?></p>
+<?php else: ?>
+    <ul class="list-testimonials">
+    <?php foreach ($this->box->testimonials as $testimonial) : ?>
+        <?php $anchor = strtolower(str_replace(' ', '-', $testimonial['author'])); ?>
+        <li id="<?php echo $anchor; ?>">
+            <p class="heading">
+                <span class="author"><?php echo $testimonial['author'] ?></span>,
+                <span class="date"><?php
+                    $date = new Axis_Date($testimonial['date_posted'], Zend_Date::ISO_8601);
+                    echo $date->get(Zend_Date::DATE_LONG);
+                ?></span>
+                <a href="<?php echo $this->url(array(), 'testimonials') ?>#<?php echo $anchor ?>" class="anchor">&para;</a>
+            </p>
+            <div class="content"><?php echo $testimonial['content'] ?></div>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+<?php endif; ?>

@@ -1,0 +1,47 @@
+.list-testimonials {}
+.list-testimonials li {
+    background: #ededed;
+    margin: 0 0 0.8em;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+.list-testimonials li.last {
+    margin: 0;
+}
+.list-testimonials .heading {
+    font: normal 1.25em "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    margin: 0 0 0.3em;
+}
+.list-testimonials .anchor {
+    color: #c9c9c9;
+    text-decoration: none;
+}
+.list-testimonials .anchor:hover {
+    color: #777;
+    text-decoration: underline;
+}
+.list-testimonials .author {
+    color: #7a1e1e;
+}
+.list-testimonials .date {
+    color: #848484;
+    font-size: 0.7em;
+}
+.list-testimonials .content {
+    color: #222;
+    font: italic 1.33em Georgia, Times, "Times New Roman", serif;
+}
+
+/* Side columns has slightly another styles */
+.side-col .list-testimonials {
+    font-size: 0.85em;
+    margin: 5px 0;
+}
+.side-col .box .list-testimonials { /* If the box is wrapped into standard divs */
+    margin: 0;
+}
+.side-col .list-testimonials li {
+    background: none;
+    border-radius: 0;
+    padding: 0;
+}
